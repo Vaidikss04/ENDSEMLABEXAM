@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Result Management System</h1>
+    <p>Admin Dashboard</p>
+</header>
+
+<div class="container">
+
+    <h2>Dashboard</h2>
+
+    <div class="stats">
+        <div class="card">Total Students: <span id="total">0</span></div>
+        <div class="card">Passed: <span id="passed">0</span></div>
+        <div class="card">Failed: <span id="failed">0</span></div>
+    </div>
+
+    <h2>Add Student Result</h2>
+
+    <form id="resultForm">
+        <input id="name" placeholder="Student Name" required>
+        <input id="roll" placeholder="Roll Number" required>
+
+        <input id="m1" type="number" placeholder="Maths" min="0" max="100" required>
+        <input id="m2" type="number" placeholder="Science" min="0" max="100" required>
+        <input id="m3" type="number" placeholder="English" min="0" max="100" required>
+        <input id="m4" type="number" placeholder="Computer" min="0" max="100" required>
+        <input id="m5" type="number" placeholder="Social" min="0" max="100" required>
+
+        <button type="submit">Add Result</button>
+    </form>
+
+    <h2>Student Records</h2>
+    <input id="search" placeholder="Search student..." oninput="display()">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No.</th>
+                <th>Total</th>
+                <th>Percentage</th>
+                <th>Grade</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="records"></tbody>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
